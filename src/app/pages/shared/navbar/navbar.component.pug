@@ -1,0 +1,17 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+  a.navbar-brand('[routerLink]'="['/']") Payback Time!
+  button.navbar-toggler.navbar-toggler(type='button', data-toggle='collapse', data-target='#navigation', aria-controls='navigation-index', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-bar.bar1
+    span.navbar-toggler-bar.bar2
+    span.navbar-toggler-bar.bar3
+  #navigation.collapse.navbar-collapse.justify-content-end
+    span.navbar-text('*ngIf'="this.sessionService.userSignedIn()") Welcome {{ this.sessionService.getCurrentUser().name }}!
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link('[routerLink]'="['/']" 'routerLinkActive'="active" '[routerLinkActiveOptions]'="{exact: true}") Home
+      li.nav-item('*ngIf'="!this.sessionService.userSignedIn()")
+        a.nav-link('[routerLink]'="['/login']" 'routerLinkActive'="active") Login/Register
+      li.nav-item('*ngIf'="this.sessionService.userSignedIn()")
+        a.nav-link('[routerLink]'="['/classes']" 'routerLinkActive'="active") Classes
+      li.nav-item('*ngIf'="this.sessionService.userSignedIn()")
+        a.nav-link('(click)'="logout()" href='#') Logout
