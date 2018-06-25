@@ -11,28 +11,32 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 
-import { NavbarComponent } from './pages/shared/navbar/navbar.component';
+// import { NavbarComponent } from './pages/shared/navbar/navbar.component';
 
 import { HttpService } from './services/utils/http.service';
 import { LocalStorage } from './services/utils/local-storage.service';
 import { SessionService } from './services/api/session.service';
 import { UserService } from './services/api/user.service';
+import { SharedModule } from './pages/shared/shared.module';
+// import { UiElementsComponent } from './pages/ui-elements';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
+    // NavbarComponent,
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    // UiElementsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [
     HttpService,

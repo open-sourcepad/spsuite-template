@@ -1,0 +1,21 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+html, html a, body { 
+  -webkit-font-smoothing: antialiased; 
+}
+
+body { 
+  font-family: 'Avenir', "Segoe UI", "Helvetica Neue", Arial, sans-serif; 
+  font-size: 14px; 
+  color: $default;
+  background-color: $blueGreen;
+}
+
+body {
+  .main-container {
+    padding: 10px 0px;
+  }
+}
