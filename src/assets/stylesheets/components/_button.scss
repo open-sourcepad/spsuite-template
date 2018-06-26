@@ -1,9 +1,10 @@
 .btn-suite {
-  color: #fff;
+  color: $white;
   background-color: $gold;
   border-color: $gold;
 }
 
 .btn-suite:hover {
-  background-color: #b9ac5c;
+  background-color: $goldDark;
+  color: $white;
 }

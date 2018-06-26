@@ -1,9 +1,12 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { UiElementsComponent } from './ui-elements.component';
+
 import { ButtonsComponent } from './buttons/buttons.component';
-import { TypographyComponent } from './typography/typography.component';
+import { FormsComponent } from './forms/forms.component';
 import { ModalComponent } from './modal/modal.component';
+import { TableComponent } from './table/table.component';
+import { TypographyComponent } from './typography/typography.component';
 
 export const routes: Routes = [
   {
@@ -16,12 +19,20 @@ export const routes: Routes = [
         component: ButtonsComponent
       },
       {
-        path: 'typography',
-        component: TypographyComponent
+        path: 'forms',
+        component: FormsComponent
       },
       {
         path: 'modal',
         component: ModalComponent
+      },
+      {
+        path: 'table',
+        component: TableComponent
+      },
+      {
+        path: 'typography',
+        component: TypographyComponent
       },
     ]
   },

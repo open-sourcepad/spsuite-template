@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 import { routing } from './ui-elements.routing';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UiElementsComponent } from './ui-elements.component';
-import { ButtonsComponent } from './buttons/buttons.component';
 import { SharedModule } from '../shared/shared.module';
-import { TypographyComponent } from './typography/typography.component';
+
+import { ButtonsComponent } from './buttons/buttons.component';
+import { FormsComponent } from './forms/forms.component';
 import { ModalComponent } from './modal/modal.component';
+import { TableComponent } from './table/table.component';
+import { TypographyComponent } from './typography/typography.component';
+
 
 const UI_ELEMENTS_COMPONENTS = [
   ButtonsComponent,
   TypographyComponent,
-  ModalComponent
+  ModalComponent,
+  FormsComponent,
+  TableComponent,
 ]
 
 @NgModule({
