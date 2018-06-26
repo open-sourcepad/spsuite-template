@@ -6,10 +6,12 @@ import { UiElementsComponent } from './ui-elements.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { SharedModule } from '../shared/shared.module';
 import { TypographyComponent } from './typography/typography.component';
+import { ModalComponent } from './modal/modal.component';
 
 const UI_ELEMENTS_COMPONENTS = [
   ButtonsComponent,
-  TypographyComponent
+  TypographyComponent,
+  ModalComponent
 ]
 
 @NgModule({

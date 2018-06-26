@@ -1,0 +1,47 @@
+nav(aria-label='breadcrumb')
+  ol.breadcrumb
+    li.breadcrumb-item
+      a('[routerLink]'="['/']") Home
+    li.breadcrumb-item
+      a UI Elements
+    li.breadcrumb-item.active(aria-current='page') Modal
+
+.card
+  .card-body
+    h1.card-title Modal
+    button.btn.btn-primary.mb-3((click)='openSPSuiteModal(content)') Customized for SP Suite
+    br
+    button.btn.btn-primary.mb-3((click)='openBasic(content)') Basic Modal
+    br
+    button.btn.btn-primary.mb-3((click)='openBasic(other)') Other Modal
+    br
+    button.btn.btn-primary.mb-3((click)='openSm(content)') Small modal
+    br
+    button.btn.btn-primary.mb-3((click)='openLg(content)') Large modal
+    br
+    button.btn.btn-primary.mb-3((click)='openVerticallyCentered(content)') Modal vertically centered
+
+
+//- first modal
+ng-template(#content='', let-c='close', let-d='dismiss')
+  .modal-header
+    h4.modal-title Modal title
+    button.close(type='button', aria-label='Close', (click)="d('Cross click')")
+      span(aria-hidden='true').ti-close
+  .modal-body
+    p Lorem ipsum...
+
+  .modal-footer
+    button.btn.btn-suite(type='button', (click)="c('Close click')") Save
+    button.btn.btn-dark(type='button', (click)="c('Close click')") Close
+
+//- another modal
+ng-template(#other='', let-c='close', let-d='dismiss')
+  .modal-header
+    h4.modal-title Other Modal title
+    button.close(type='button', aria-label='Close', (click)="d('Cross click')")
+      span(aria-hidden='true') ×
+  .modal-body
+    p Lorem ipsum...
+  .modal-footer
+    button.btn.btn-light(type='button', (click)="c('Close click')") Close

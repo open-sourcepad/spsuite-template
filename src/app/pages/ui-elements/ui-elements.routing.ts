@@ -3,6 +3,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { UiElementsComponent } from './ui-elements.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { TypographyComponent } from './typography/typography.component';
+import { ModalComponent } from './modal/modal.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,10 @@ export const routes: Routes = [
       {
         path: 'typography',
         component: TypographyComponent
+      },
+      {
+        path: 'modal',
+        component: ModalComponent
       },
     ]
   },

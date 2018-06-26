@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppRoutingModule } from './app.routing';
 import { UserGuard } from './services/route-guards/user.guard';
 
@@ -36,7 +38,8 @@ import { SharedModule } from './pages/shared/shared.module';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    NgbModule.forRoot(),
+    SharedModule,
   ],
   providers: [
     HttpService,
