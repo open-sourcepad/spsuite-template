@@ -13,6 +13,7 @@ import { TypographyComponent } from './typography/typography.component';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
 import { ToastComponent } from './toast/toast.component';
 import { SwalComponent } from './swal/swal.component';
+import { IconsComponent } from './icons/icons.component';
 
 
 const UI_ELEMENTS_COMPONENTS = [
@@ -23,7 +24,8 @@ const UI_ELEMENTS_COMPONENTS = [
   TableComponent,
   LoadingBarComponent,
   ToastComponent,
-  SwalComponent
+  SwalComponent,
+  IconsComponent
 ]
 
 @NgModule({

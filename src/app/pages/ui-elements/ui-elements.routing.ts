@@ -10,6 +10,7 @@ import { TypographyComponent } from './typography/typography.component';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
 import { ToastComponent } from './toast/toast.component';
 import { SwalComponent } from './swal/swal.component';
+import { IconsComponent } from './icons/icons.component';
 
 export const routes: Routes = [
   {
@@ -48,6 +49,10 @@ export const routes: Routes = [
       {
         path: 'swal',
         component: SwalComponent
+      },
+      {
+        path: 'icons',
+        component: IconsComponent
       },
     ]
   },
