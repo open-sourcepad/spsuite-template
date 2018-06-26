@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SlimLoadingBarService } from 'ng2-slim-loading-bar';
 
 @Component({
   templateUrl: './ui-elements.pug',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class UiElementsComponent implements OnInit {
 
-  constructor() {}
+  constructor(
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

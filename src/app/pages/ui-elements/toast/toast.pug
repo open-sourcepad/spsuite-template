@@ -1,0 +1,21 @@
+nav(aria-label='breadcrumb')
+  ol.breadcrumb
+    li.breadcrumb-item
+      a('[routerLink]'="['/']") Home
+    li.breadcrumb-item
+      a UI Elements
+    li.breadcrumb-item.active(aria-current='page') Toast
+
+.card
+  .card-body
+    h1.card-title Toast
+
+    button.mr-2.btn.btn-primary(
+      type='button'
+      '(click)'='showSuccessToast()'
+    ) Success Toast
+
+    button.mr-2.btn.btn-primary(
+      type='button'
+      '(click)'='showErrorToast()'
+    ) Eror Toast

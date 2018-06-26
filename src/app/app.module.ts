@@ -13,24 +13,42 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 
-// import { NavbarComponent } from './pages/shared/navbar/navbar.component';
-
 import { HttpService } from './services/utils/http.service';
 import { LocalStorage } from './services/utils/local-storage.service';
 import { SessionService } from './services/api/session.service';
 import { UserService } from './services/api/user.service';
 import { SharedModule } from './pages/shared/shared.module';
-// import { UiElementsComponent } from './pages/ui-elements';
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+import { ToastyModule } from 'ng2-toasty';
+import { MESSAGES } from './constants';
+import { ToasterService, SwalService } from './services/utils';
 
+const APP_PROVIDERS = [
+  LocalStorage,
+  HttpService,
+  ToasterService,
+  SwalService
+]
+
+const APP_CONSTANTS = [
+  MESSAGES,
+];
+
+const ROUTE_GUARDS = [
+  UserGuard
+];
+
+const APP_SERVICES = [
+  UserService,
+  SessionService
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    // NavbarComponent,
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    // UiElementsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,15 +57,15 @@ import { SharedModule } from './pages/shared/shared.module';
     FormsModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
+    SlimLoadingBarModule.forRoot(),
+    ToastyModule.forRoot(),
     SharedModule,
   ],
   providers: [
-    HttpService,
-    LocalStorage,
-    SessionService,
-    UserService,
-
-    UserGuard,
+    ...APP_PROVIDERS,
+    ...APP_SERVICES,
+    ...ROUTE_GUARDS,
+    ...APP_CONSTANTS
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,26 @@
+nav(aria-label='breadcrumb')
+  ol.breadcrumb
+    li.breadcrumb-item
+      a('[routerLink]'="['/']") Home
+    li.breadcrumb-item
+      a UI Elements
+    li.breadcrumb-item.active(aria-current='page') Loading Bar
+
+.card
+  .card-body
+    h1.card-title Loading Bar
+
+    button.mr-2.btn.btn-primary(
+      type='button'
+      '(click)'='startLoad()'
+    ) Start
+
+    button.mr-2.btn.btn-secondary(
+      type='button'
+      '(click)'='stopLoad()'
+    ) Stop
+
+    button.mr-2.btn.btn-success(
+      type='button'
+      '(click)'='completeLoad()'
+    ) Complete

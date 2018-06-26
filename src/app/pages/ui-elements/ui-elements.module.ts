@@ -10,6 +10,9 @@ import { FormsComponent } from './forms/forms.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './table/table.component';
 import { TypographyComponent } from './typography/typography.component';
+import { LoadingBarComponent } from './loading-bar/loading-bar.component';
+import { ToastComponent } from './toast/toast.component';
+import { SwalComponent } from './swal/swal.component';
 
 
 const UI_ELEMENTS_COMPONENTS = [
@@ -18,6 +21,9 @@ const UI_ELEMENTS_COMPONENTS = [
   ModalComponent,
   FormsComponent,
   TableComponent,
+  LoadingBarComponent,
+  ToastComponent,
+  SwalComponent
 ]
 
 @NgModule({

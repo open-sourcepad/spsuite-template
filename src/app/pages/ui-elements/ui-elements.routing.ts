@@ -7,6 +7,9 @@ import { FormsComponent } from './forms/forms.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './table/table.component';
 import { TypographyComponent } from './typography/typography.component';
+import { LoadingBarComponent } from './loading-bar/loading-bar.component';
+import { ToastComponent } from './toast/toast.component';
+import { SwalComponent } from './swal/swal.component';
 
 export const routes: Routes = [
   {
@@ -33,6 +36,18 @@ export const routes: Routes = [
       {
         path: 'typography',
         component: TypographyComponent
+      },
+      {
+        path: 'loading-bar',
+        component: LoadingBarComponent
+      },
+      {
+        path: 'toast',
+        component: ToastComponent
+      },
+      {
+        path: 'swal',
+        component: SwalComponent
       },
     ]
   },
