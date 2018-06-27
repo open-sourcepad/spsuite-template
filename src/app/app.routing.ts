@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'ui-elements', loadChildren: './pages/ui-elements/ui-elements.module#UiElementsModule' },
+  { path: 'your-module', loadChildren: './pages/your-module/your-module.module#YourModuleModule' },
 ];
 
 @NgModule({

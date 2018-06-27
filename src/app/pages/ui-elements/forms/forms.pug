@@ -13,6 +13,13 @@ nav(aria-label='breadcrumb')
         h4.card-title
           span Datepicker
         .mrg-top-50
+          form.form-inline
+            .form-group
+              .input-group
+                input.form-control(placeholder='yyyy-mm-dd', name='dp', ngbDatepicker='', #d='ngbDatepicker')
+                .input-group-append
+                  button.btn.btn-outline-secondary((click)='d.toggle()', type='button')
+                    span.ti-calendar
 
 
   .col-md-6

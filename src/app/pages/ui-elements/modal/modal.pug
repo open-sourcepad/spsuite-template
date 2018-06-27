@@ -55,6 +55,14 @@ ng-template(#content='', let-c='close', let-d='dismiss')
         .form-group.col-md-2
           label(for='inputZip') Zip
           input#inputZip.form-control(type='text')
+      .form-row
+        .form-group.col-md-12
+          .input-group
+            input.form-control(placeholder='yyyy-mm-dd', name='dp', ngbDatepicker='', #d='ngbDatepicker')
+            .input-group-append
+              button.btn.btn-outline-secondary((click)='d.toggle()', type='button')
+                span.ti-calendar
+
       .form-group
         .form-check
           input#gridCheck.form-check-input(type='checkbox')

@@ -5,6 +5,8 @@ import { routing } from './ui-elements.routing';
 import { UiElementsComponent } from './ui-elements.component';
 import { SharedModule } from '../shared/shared.module';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { ButtonsComponent } from './buttons/buttons.component';
 import { FormsComponent } from './forms/forms.component';
 import { ModalComponent } from './modal/modal.component';
@@ -32,7 +34,8 @@ const UI_ELEMENTS_COMPONENTS = [
   imports: [
     CommonModule,
     routing,
-    SharedModule
+    SharedModule,
+    NgbModule
   ],
   declarations: [
     UiElementsComponent,
